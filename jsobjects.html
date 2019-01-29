@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/dracula.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <link rel="stylesheet" href="./css/jsobjects.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+    <div class="navbar-fixed">
+      <nav>
+        <div id="colorchange" class="nav-wrapper light-blue">
+          <div class="container">
+            <a id="chng" class="brand-logo">ОБ'ЄКТИ</a>
+            <ul id="nav-mobile" class="right">
+              <li><a href="#">LINK1</a></li>
+              <li><a href="#">LINK2</a></li>
+              <li><a href="#">LINK3</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="rw-one" class="row blue lighten-4 row-one">
+      <div class="col s12 m12 l12 xl4">
+        <div class="card-image">
+          <img
+            class="materialboxed responsive-img"
+            width="420px"
+            src="./tutorials/js/img/house.svg"
+          />
+        </div>
+        <div class="card-content">
+          <p class="dark-text blue lighten-5 z-depth-2">
+            Спробуйте самостійно описати дерево та будівлю на малюнку у вигляді
+            об'єкту. Використайте свій запис у вигляді "властивість: значення".
+          </p>
+        </div>
+      </div>
+      <div class="col s12 m12 l12 xl8 black-text">
+        <h2>ОБ'ЄКТ</h2>
+        <p>
+          Майже все, що оточує людину, можна назвати об'єктами. Об'єктом може бу
+          ти предмет, природнє явище, жива істота і навіть вигадана людиною
+          нематеріальна реч, поняття, таке як гумор, думка, наука.
+        </p>
+        <p>
+          У всіх людських мовах існують три фундаментальні поняття відносно
+          сутностей, які описує мова: сама сутність (іменник), її якість
+          (прикметник) та дія, яку може виконувати сутність (дієслово).
+          Будь-який об'єкт складається з цих трьох фундаментальних понять.
+          Сутність - це сам <b>об'єкт</b>, набір якостей - його
+          <b>властивості</b>, а дії, які він вміє виконувати, називають
+          <b>методами</b> об'єкта.
+        </p>
+        <p>
+          Подивіться на малюнок із будинком та машиною. Будь-який об'єкт на
+          цьому зображенні можна описати набіром властивостей та методів. Для
+          зручності властивості та методи записують у вигляді пари
+          <b>"властивість: її значення"</b>. Причому значення подається у
+          вигляді одинного параметру, описаного певним типом даних (число, текст
+          тощо). Спробуємо описати об'єкт "машина" на малюнку:
+        </p>
+        <blockquote>
+          <pre><code class="plaintext">
+    Об'єкт: машина
+    
+    Властивості
+
+    Країна-виробник: Україна
+    завод: ЗАЗ
+    модель: Таврія-Комета
+    колір: темно-синій
+    тип кузову: седан
+    макс. швидкість, км/год: 250
+    розхід пального, л/100км: 7
+    
+    Методи
+
+    метод: стартувати
+    метод: розганятися
+    метод: активувати круїз-контроль
+    метод: гальмувати
+    метод: переключати режими `спорт` - `комфорт`
+          </code></pre>
+        </blockquote>
+        <p>
+          Яку кількість властивостей та методів треба додати до об'єкта для його
+          опису? На це запитання допоможе відповісти принцип моделювання. Як ви
+          знаєте, модель - це відтворення найважливіших характеристик для певної
+          задачи. Так, наприклад, для графічного подання об'єкта "яблуко",
+          найважливішими властивостями є форма та колір. Отже, опис таких
+          властивостей як запах, хімічний склад, ціна тощо не є доцільним в
+          даному випадку. Аналогічним чином ми описуємо будь який об'єкт. Наш
+          опис, набір властивостей, є моделлю, відтворенням найважливіших для
+          нас якостей.
+        </p>
+        <p>
+          Повернемося до нашої машини. Припустимо, ми володіємо автомагазином
+          суперкарів, і для наших клієнтів вирішальним фактором є колір,
+          максимальна швидкість та розгін. Тоді наш об'єкт буде виглядати так:
+        </p>
+        <blockquote>
+          <pre><code class="plaintext">
+    Об'єкт: машина
+            
+    Властивості
+    
+    колір: темно-синій
+    макс. швидкість, км/год: 250
+            
+    Методи
+      
+    метод: розганятися
+                </code></pre>
+        </blockquote>
+        <p>
+          Отже, <b>об'єкт</b> - це <b>інформаційна модель сутності</b>, яка
+          подана за допомогою набору <b>властивостей та методів</b>. Властивість
+          - величина, яка характеризує параметр об'єкта, а метод - опис дії, яку
+          може виконати об'єкт.
+        </p>
+        <p>
+          У наступному розділі ми поговоримо про реалізацію об'єктів мовою
+          програмування Javascript.
+        </p>
+        <h3>Перевір себе</h3>
+        <div class="dark-text blue lighten-5 z-depth-2">
+          <p>Характеристики, які належать об'єкту, називаються</p>
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header">властивості та дії</div>
+              <div class="collapsible-body red lighten-4">
+                <span>Неправильно!</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">параметри та методи</div>
+              <div class="collapsible-body red lighten-4">
+                <span>Неправильно!</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">властивості та методи</div>
+              <div class="collapsible-body green lighten-4">
+                <span>Правильно!</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="rw-two" class="row red lighten-4 row-two">
+      <div class="col s8 black-text">
+        <H1>WAT</H1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+          doloremque vero inventore magni natus ratione nobis ad dolorem in
+          sequi quia iste a quos, fugit sit animi enim asperiores nostrum. Lorem
+          ipsum dolor sit, amet consectetur adipisicing elit. Est aliquam
+          doloremque perspiciatis magni dicta tempora ea omnis corrupti, dolorum
+          modi! Impedit, minima unde animi deserunt consequatur doloribus
+          recusandae necessitatibus >Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quo totam ratione, voluptatem qui odit nemo officiis
+          iure repudiandae, sapiente earum fugit temporibus suscipit, quasi vero
+          sit ducimus ut natus consequuntur? Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Suscipit aliquid accusamus qui rem
+          labore dolore quae fugiat quo dolores debitis dolor nesciunt mollitia
+          sunt, veritatis pariatur iste aut nemo! Excepturi? Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Totam doloremque vero inventore
+          magni natus ratione nobis ad dolorem in sequi quia iste a quos, fugit
+          sit animi enim asperiores nostrum. Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Est aliquam doloremque perspiciatis
+          magni dicta tempora ea omnis corrupti, dolorum modi! Impedit, minima
+          unde animi deserunt consequatur doloribus recusandae necessitatibus
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo totam
+          ratione, voluptatem qui odit nemo officiis iure repudiandae, sapiente
+          earum fugit temporibus suscipit, quasi vero sit ducimus ut natus
+          consequuntur? Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Suscipit aliquid accusamus qui rem labore dolore quae fugiat quo
+          dolores debitis dolor nesciunt mollitia sunt, veritatis pariatur iste
+          aut nemo! Excepturi? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Totam doloremque vero inventore magni natus ratione
+          nobis ad dolorem in sequi quia iste a quos, fugit sit animi enim
+          asperiores nostrum. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Est aliquam doloremque perspiciatis magni dicta
+          tempora ea omnis corrupti, dolorum modi! Impedit, minima unde animi
+          deserunt consequatur doloribus recusandae necessitatibus >Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Quo totam ratione,
+          voluptatem qui odit nemo officiis iure repudiandae, sapiente earum
+          fugit temporibus suscipit, quasi vero sit ducimus ut natus
+          consequuntur? Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Suscipit aliquid accusamus qui rem labore dolore quae fugiat quo
+          dolores debitis dolor nesciunt mollitia sunt, veritatis pariatur iste
+          aut nemo! Excepturi? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Totam doloremque vero inventore magni natus ratione
+          nobis ad dolorem in sequi quia iste a quos, fugit sit animi enim
+          asperiores nostrum.
+        </p>
+      </div>
+      <div class="col s4">
+        <img
+          class="responsive-img"
+          width="480"
+          src="./tutorials/js/img/house.svg"
+        />
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script>
+      hljs.configure({ tabReplace: "    " });
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="./js/jsobjects.js"></script>
+  </body>
+</html>

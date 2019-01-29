@@ -1,0 +1,29 @@
+p {
+    font-size: 1.5rem;
+}
+
+#colorchange {
+    transition-property: background-color;
+    transition-duration: 2s;
+}
+
+.row {
+    margin-bottom: 0px;
+}
+
+.col.l4,
+.col.l8,
+.col.m4,
+.col.m8,
+.col.s12 {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+code {
+    font-size: 1.3rem;
+}
+
+blockquote {
+    border-width: 9px;
+}
